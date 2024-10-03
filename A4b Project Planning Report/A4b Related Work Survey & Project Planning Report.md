@@ -1,53 +1,71 @@
 # Table of Contents
-[**1. Related Work Survey**](#related-work-survey)
+[**1. Scope of Document**](#scope-of-document)
 ---
-> [**1.1. Introduction**](#introduction)
+[**2. Overview of Project**](#project-overview)
+---
+[**Part 1: Related Work Survey**](#related-work-survey)
+---
+> [**3.1. Introduction**](#introduction)
 > ---
-> * [**1.1.1. Scope of Document**](#scope-of-document)
-> * [**1.1.2. Project Overview**](#project-overview)
 > 
-> [**1.2. Related Work Survey**](#related-work-survey)
+> [**3.2. Related Work Surveys**](#related-work-survey)
 > ---
-> * [**1.2.1. Survey Introduction**](#survey-introduction)
-> * [**1.2.2. Background Information**](#background-information)
-> * [**1.2.3. Related Work Reviews**](#related-work-reviews)
-> * [**1.2.4. Comparison To Proposed Work**](#comparison-to-proposed-work)
+> * [**3.2.1. Survey Introduction**](#survey-introduction)
+> * [**3.2.2. Background Information**](#background-information)
+> * [**3.2.3. Related Work Reviews**](#related-work-reviews)
+> * [**3.2.4. Comparison To Proposed Work**](#comparison-to-proposed-work)
 
-[**2. Project Planning**](#project-planning)
+[**Part 2: Project Planning**](#project-planning)
 ---
-> [**2.2. Work Packets**](#work-packets)
+> [**4.2. Work Packets**](#work-packets)
 > ---
-> * [**2.2.1. WP-1 Project Management**](#work-packet-1-project-management)
+> * [**4.2.1. WP-1 Project Management**](#work-packet-1-project-management)
 >
-> [**2.3. Project Schedule & Milestones**](#project-schedule--timeline)
+> * [**4.2.2. WP-2 GUI Development**]
+>
+> * [**4.2.3. WP-3 Application Software Development**]
+>
+> * [**4.2.4. WP-4 Testing & Validation**]
+>
+> [**4.3. Project Schedule & Milestones**](#project-schedule--timeline)
 > ---
-> [**2.4. Conclusion**](#conclusion)
+> [**4.4. Conclusion**](#conclusion)
 > ---
-[**3. Appendix**](#appendix-1)
+[**5. Appendix**](#appendix-1)
 ---
-[**4. Citations**](#citations)
+[**6. Citations**](#citations)
 ---
-# Related Work Survey
+
+# Scope of Document
+
+# Project Overview
+
+# Part 1: Related Work Survey
 
 ## Introduction
+> Load balancing is a crucial element in the performance, reliability, and efficiency of any well-designed Software-Defined Network (SDN). Its primary purpose is to optimize network resources by distributing traffic evenly, preventing certain data paths or devices from becoming overloaded while others remain underutilized. As networks have grown more complex, the methods of traffic management have evolved dramatically. Early approaches were largely static, manual, and reactive; once traffic routes were configured, they remained unchanged unless manually adjusted by administrators. However, as network demands increased, dynamic routing protocols were introduced, allowing traffic to be automatically rerouted based on network conditions without the need for human intervention.
+> 
+> Today, real-time traffic management has become far more sophisticated. Modern systems often rely on AI-driven algorithms that make intelligent, real-time decisions based on current traffic patterns and network health data. This evolution towards automated, adaptive traffic management aligns with the goals of our project: rather than developing a traditional load balancer, we are proposing a telemetry-driven prototype that adjusts traffic paths dynamically based on real-time flow statistics collected from Open vSwitch (OVS) switches. By leveraging these real-time data streams, our system aims to ensure optimal load distribution across the network.
+>
+> In the context of modern SDN environments, several key technologies and algorithms play a critical role in enabling effective load balancing and real-time traffic management. OpenFlow (an early and widely-adopted protocol for SDN), allows the SDN controller to communicate directly with the forwarding plane of network devices. It provides the foundation for centralized traffic control, enabling flexible routing decisions based on real-time conditions.
+>
+> Tools like GoFlow2 and Kafka are essential for collecting, processing, and analyzing network telemetry data. GoFlow2 is used to extract detailed flow statistics from Open vSwitch (OVS) instances, providing a granular view of traffic patterns across the network. This real-time data is then streamed into Kafka, a distributed streaming platform that processes and aggregates the telemetry information, making it accessible for decision-making in load balancing.
+>
+> As we build upon this architecture, our project aims to leverage these established tools to enhance real-time telemetry-driven load balancing. By integrating this telemetry data into our system, we seek to improve traffic distribution efficiency in complex network environments. However, to fully understand the landscape, it's important to review existing work in this space and differentiate our approach from related studies.
 
-### Scope of Document
+## Review of Related Works
 
-### Project Overview
+### Work 1
 
-## Related Work Survey
+### Work 2
 
-### Survey Introduction
+### Work 3
 
-### Background Information
-
-### Related Work Reviews
-
-#### Related Work 1:
+### Work 4
 
 ### Comparison To Proposed Work
 
-# Project Planning
+# Part 2: Project Planning
 
 ## Work Packets
 ### Work Packet 1: [Project Management](/A4b%20Project%20Planning%20Report/wp-1_ProjectManagement.md)
@@ -61,21 +79,22 @@
 ## Project Schedule & Timeline
 
 ### Deliverables & Milestones
-> Milestone 1: **Literature Review & Technology Selection** milestone 1 is expected to be met by progress report 1. We are expecting to have a comprehensive literature review on [_SDN_](#software-defined-networking), [_Load Balancing_](#load-balancing) and telemetry technologies.
->
-> Milestone 2: **System Architecture Design** we expect to have a detailed system architecture diagram outlining component interactions & data flow.
->
-> Milestone 3: **Telemetry Data Collection & Processing** we expect to complete milestone 3 by progress reports 3 and 4. At this stage documentation for a prototype system to collect and process incoming network telemetry data from [_OVS_](#open-vswitch-ovs) instances using [_GoFlow2_]().
->
-> Milestone 4: **Load Balancing Algorithm Development** by the 5th and final reports we expect to have finalized the documentation and begin the development of the prototype load balancing algorithm.
->
-> Milestone 5: **Integration & Testing** at this stage in second semester of the project we are striving to integrate the prototype load balancer with the [_SDN_](#software-defined-networking) controller and [_OVS_](#open-vswitch-ovs) instances.
->
-> Milestone 6: **Performace Evaluation** at this stage in the second semester we will evaluate the performance of the prototype load balancer using tools like [_Docker_](#docker-and-containers) containerization for deploying [_Mininet_](#mininet) instances to generate simulated network traffic.
->
-> Milestone 7: **Refinement & Optimization** we will strive at this point to iteratively refine the prototype load balancer's algorithm and system architecture based on the performance evaluation results.
->
-> Milestone 8: **Final Prototype Demonstration** At the end of the second semester we will strive to have a completed prototype that is ready to deploy and showcase.
+
+* Milestone 1: **Literature Review & Technology Selection** milestone 1 is expected to be met by progress report 1. We are expecting to have a comprehensive literature review on [_SDN_](#software-defined-networking), [_Load Balancing_](#load-balancing) and telemetry technologies.
+
+* Milestone 2: **System Architecture Design** we expect to have a detailed system architecture diagram outlining component interactions & data flow.
+
+* Milestone 3: **Telemetry Data Collection & Processing** we expect to complete milestone 3 by progress reports 3 and 4. At this stage documentation for a prototype system to collect and process incoming network telemetry data from [_OVS_](#open-vswitch-ovs) instances using [_GoFlow2_]().
+
+* Milestone 4: **Load Balancing Algorithm Development** by the 5th and final reports we expect to have finalized the documentation and begin the development of the prototype load balancing algorithm.
+
+* Milestone 5: **Integration & Testing** at this stage in second semester of the project we are striving to integrate the prototype load balancer with the [_SDN_](#software-defined-networking) controller and [_OVS_](#open-vswitch-ovs) instances.
+
+* Milestone 6: **Performace Evaluation** at this stage in the second semester we will evaluate the performance of the prototype load balancer using tools like [_Docker_](#docker-and-containers) containerization for deploying [_Mininet_](#mininet) instances to generate simulated network traffic.
+
+* Milestone 7: **Refinement & Optimization** we will strive at this point to iteratively refine the prototype load balancer's algorithm and system architecture based on the performance evaluation results.
+
+* Milestone 8: **Final Prototype Demonstration** At the end of the second semester we will strive to have a completed prototype that is ready to deploy and showcase.
 
 ## Conclusion
 
